@@ -9,7 +9,9 @@ const tulostaTahtia = (maara) => console.log("* ".repeat(maara));
 
 const tulostaTulos = (tulos) => {
     let viiva = "-".repeat(tulos.toString().length);
-    console.log(viiva + "\n" + tulos + "\n" + viiva);
+    console.log(viiva);
+    console.log(tulos);
+    console.log(viiva);
 };
 
 

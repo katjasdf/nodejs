@@ -11,21 +11,21 @@ Kokeile tulostamista tulostus-moduulin palveluilla
 
 const { tulostaTahtia, tulostaTulos } = require('./tulostus'); // .js-liitteen voi jättää pois
 
-const tulostaNelio = (sivu) => {
+const tulostaNelio = (sivu, tulostaRivi) => {
     for (i = 0; i < sivu; i++) {
-        tulostaTahtia(sivu)
+        tulostaRivi(sivu)
     }
 };
 
-const tulostaSuorakulmio = (leveys, korkeus) => {
+const tulostaSuorakulmio = (leveys, korkeus, tulostaRivi) => {
     for (i = 0; i < korkeus; i++) {
-        tulostaTahtia(leveys)
+        tulostaRivi(leveys)
     }
 };
 
-const tulostaKolmio = (korkeus) => {
+const tulostaKolmio = (korkeus, tulostaRivi) => {
     for (i = 0; i < korkeus; i++) {
-        tulostaTahtia(i + 1)
+        tulostaRivi(i + 1)
     }
 };
 
@@ -39,18 +39,11 @@ const lukusarjanSumma = (n) => {
     return summa;
 }
 
-const kertoma = (n) => {
-    let summa = n;
-    while (n > 1) {
-        n--;
-        summa = summa * n;
-    }
-    return summa;
-}
+const kertoma = (n) => n > 0 ? kertoma(n - 1) * n : 1;
 
-tulostaNelio(4);
-tulostaSuorakulmio(5, 3);
-tulostaKolmio(5);
+tulostaNelio(4, tulostaTahtia);
+tulostaSuorakulmio(5, 3, tulostaTahtia);
+tulostaKolmio(5, tulostaTahtia);
 tulostaTulos(lukusarjanSumma(100));
 tulostaTulos(kertoma(20));
 
