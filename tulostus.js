@@ -5,9 +5,9 @@ jälkeen on samanmittainen rivi väliviivoja. Huomaa, että tulos voi olla merkk
 jotain muuta. Se on syytä muuntaa merkkijonoksi ennen tulostusta.
 */
 
-tulostaTahtia = (maara) => console.log("* ".repeat(maara));
+const tulostaTahtia = (maara) => console.log("* ".repeat(maara));
 
-tulostaTulos = (tulos) => {
+const tulostaTulos = (tulos) => {
     let viiva = "-".repeat(tulos.toString().length);
     console.log(viiva + "\n" + tulos + "\n" + viiva);
 };

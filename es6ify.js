@@ -21,15 +21,15 @@ function power(base, exponent) {
 };
 */
 
-hello = () => console.log("Hello, World!");
+const hello = () => console.log("Hello, World!");
 
-sayHi = (name) => console.log("Hi " + name + "!");
+const sayHi = (name) => console.log("Hi " + name + "!");
 
-multiplyByTen = (a, b = 10) => { return a * b };
+const multiplyByTen = (a, b = 10) => { return a * b };
 
-sum = (a, b) => { return a + b };
+const sum = (a, b) => { return a + b };
 
-power = (base, exponent) => { return result = Math.pow(base, exponent) };
+const power = (base, exponent) => { return result = Math.pow(base, exponent) };
 
 hello();
 sayHi('Katja');
